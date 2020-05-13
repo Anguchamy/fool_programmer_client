@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-label>
+      <b> Posts </b>
+    </mat-label>
+</mat-card>
+
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let post of posts | async">
+      <mat-expansion-panel-header class="right-aligned-header">
+        <mat-panel-title>
+          <b>{{post.title}}</b>
+        </mat-panel-title>
+        <mat-panel-description>
+            <p>By : {{post.username}}</p>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-label [innerHTML]="post.content"></mat-label>
+    </mat-expansion-panel>
+</mat-accordion>

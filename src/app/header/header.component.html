@@ -1,0 +1,25 @@
+<mat-toolbar class="header">
+  <div>
+    <img src="https://img-a.udemycdn.com/user/200_H/27512530_35e7_6.jpg" width="42" height="42"/>
+  </div>
+  <div>
+    <a routerLink="" style="color:aliceblue;">Tut Programmer</a>
+  </div>
+  <span class="spacer"></span>
+  <div>
+    <button mat-button style="color: aliceblue;" routerLink="/home">Home</button>
+  </div>
+  <div>
+    <div *ngIf=isAuthenticated()>
+      <button mat-button [matMenuTriggerFor]="belowMenu" style="color:aliceblue;">{{username}}</button>
+      <mat-menu #belowMenu="matMenu" xPosition="before">
+        <button mat-menu-item routerLink="/add-post">Add Post</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+    <div *ngIf=!isAuthenticated()>
+      <button mat-button style="color: aliceblue;" routerLink="/login">Login</button>
+      <button mat-button style="color: aliceblue;" routerLink="/register">Register</button>
+    </div>
+  </div>
+</mat-toolbar>
