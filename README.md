@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tutprogrammerblog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# tutprogrammer-front-end
+A simple blog frontend using angular JS
+>>>>>>> 72f8e2fb0d94207f3b4729b51fecc5a3a0ef61cd
