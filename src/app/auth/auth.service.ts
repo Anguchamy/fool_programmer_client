@@ -13,17 +13,17 @@ import { map } from 'rxjs/operators';
 
 export class AuthService {
 
-  private url = 'http://localhost:8080/api/auth/';
+  private url = '/api/auth';
   constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) {
     //this.localStorageService.clear()
    }
 
   register(registerPayload: RegisterPayload): Observable<any>{
-    return this.httpClient.post(this.url + 'signup', registerPayload);
+    return this.httpClient.post(this.url + '/signup', registerPayload);
   }
 
   login(loginPayload: LoginPayload): Observable<boolean> {
-    return this.httpClient.post<JwtAuthToken>(this.url + 'login', loginPayload).pipe(map(data => {
+    return this.httpClient.post<JwtAuthToken>(this.url + '/login', loginPayload).pipe(map(data => {
       this.localStorageService.store('authenticationToken', data.authenticationToken);
       this.localStorageService.store('username', data.username);
       return true;

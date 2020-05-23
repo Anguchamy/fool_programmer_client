@@ -8,18 +8,18 @@ import { Observable } from 'rxjs';
 })
 export class AddPostService {
 
-  private url = 'http://localhost:8080/api/posts/'
+  private url = '/api/posts'
   constructor(private httpClient: HttpClient) { }
 
   addPost(postPayload: PostPayload){
-    return this.httpClient.post(this.url+ 'addpost', postPayload);
+    return this.httpClient.post(this.url+ '/addpost', postPayload);
   }
 
   getAllPost(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>(this.url+'all');
+    return this.httpClient.get<Array<PostPayload>>(this.url+'/all');
   }
 
   getPost(permalink: Number): Observable<PostPayload>{
-    return this.httpClient.get<PostPayload>(this.url+"post/"+permalink);
+    return this.httpClient.get<PostPayload>(this.url+"/post/"+permalink);
   }
 }
