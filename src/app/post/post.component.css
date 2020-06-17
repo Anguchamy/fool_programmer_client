@@ -1,0 +1,13 @@
+:host{
+    display : block;
+    margin-top: 1rem;
+  }
+
+.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+    flex-basis: 0;
+  }
+
+.postclass{
+  margin-left: 100px;
+  margin-right: 100px;
+}

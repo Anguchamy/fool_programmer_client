@@ -23,10 +23,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule} from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { WeatherApiComponent } from './weather-api/weather-api.component';
+import { Covid19TrackerComponent } from './covid19-tracker/covid19-tracker.component';
 
 
 @NgModule({
@@ -38,7 +41,9 @@ import { MatCardModule } from '@angular/material/card';
     LoginComponent,
     HomeComponent,
     AddPostComponent,
-    PostComponent
+    PostComponent,
+    WeatherApiComponent,
+    Covid19TrackerComponent
   ],
   imports: [
     BrowserModule,
@@ -50,12 +55,14 @@ import { MatCardModule } from '@angular/material/card';
     Ng2Webstorage.forRoot(),
     RouterModule.forRoot([
       {path:'', component: HomeComponent},
+      {path:'home', component: HomeComponent},
       {path:'register', component: RegisterComponent},
-      {path:'post/:id', component: PostComponent},
       {path:'login', component: LoginComponent},
       {path:'register-success', component: RegisterSuccessComponent},
-      {path:'home', component: HomeComponent},
-      {path:'add-post', component: AddPostComponent, canActivate:[AuthGuard]}
+      {path:'posts', component: PostComponent},
+      {path:'add-post', component: AddPostComponent, canActivate:[AuthGuard]},
+      {path:'weather-api', component: WeatherApiComponent},
+      {path:'covid19',component: Covid19TrackerComponent}
     ]),
     BrowserAnimationsModule,
     MatButtonModule,
@@ -64,7 +71,8 @@ import { MatCardModule } from '@angular/material/card';
     MatMenuModule,
     MatExpansionModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
   bootstrap: [AppComponent]

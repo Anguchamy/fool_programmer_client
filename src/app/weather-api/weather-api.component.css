@@ -1,0 +1,31 @@
+:host {
+    display : block;
+    margin-top: 3rem;
+}
+
+.weatherclass {
+    margin-left: 100px;
+    margin-right: 500px;
+}
+
+.mat-header-image-weather {
+    background-image: url('https://icons-for-free.com/iconfiles/png/512/sunny+temperature+weather+icon-1320196637430890623.png');
+    background-size: cover;
+}
+
+.mat-card {
+    max-width: 350px;
+    margin-left: 50px;
+    float: left;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    
+}
+
+.title {
+    margin-right: auto;
+    font-weight: 400;
+}

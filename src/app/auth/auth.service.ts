@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 
 export class AuthService {
 
-  private url = '/api/auth';
+  private url = 'http://localhost:8080/api/auth';
   constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) {
     //this.localStorageService.clear()
    }

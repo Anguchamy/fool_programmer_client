@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AddPostService {
 
-  private url = '/api/posts'
+  private url = 'http://localhost:8080/api/posts'
   constructor(private httpClient: HttpClient) { }
 
   addPost(postPayload: PostPayload){

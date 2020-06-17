@@ -1,17 +1,21 @@
-<div class="content">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-8">
-          <h1 class="blog-title">{{post.title}}</h1>
-          <span>
-                <p>by {{post.username}}</p>
-          </span>
-          <hr>
-          <p [innerHTML]="post.content"></p>
-          <hr>
-        </div>
-      </div>
-  
-    </div>
-  </div>
+<div class="postclass">
+  <mat-card>
+      <mat-label>
+        <b> Posts </b>
+      </mat-label>
+  </mat-card>
+
+  <mat-accordion>
+      <mat-expansion-panel *ngFor="let post of posts | async">
+        <mat-expansion-panel-header class="right-aligned-header">
+          <mat-panel-title>
+            <b>{{post.title}}</b>
+          </mat-panel-title>
+          <mat-panel-description>
+              <p>By : {{post.username}}</p>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-label [innerHTML]="post.content"></mat-label>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>

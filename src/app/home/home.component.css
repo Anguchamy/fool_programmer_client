@@ -1,13 +1,30 @@
 :host{
     display : block;
-    margin-top: 1rem;
-  }
-
-.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
-    flex-basis: 0;
+    margin-top: 5rem;
   }
 
 .postclass{
   margin-left: 100px;
   margin-right: 100px;
+}
+
+.mat-card {
+  max-width: 300px;
+  margin-left: 100px;
+  float: left;
+}
+
+.mat-header-image-covid {
+  background-image: url('https://s3.ap-south-1.amazonaws.com/m3india-app-dev/ckeditor/content/coronavirus-icon-1584808634.png');
+  background-size: cover;
+}
+
+.mat-header-image-weather {
+  background-image: url('https://icons-for-free.com/iconfiles/png/512/sunny+temperature+weather+icon-1320196637430890623.png');
+  background-size: cover;
+}
+
+.mat-header-image-post {
+  background-image: url('https://static.thenounproject.com/png/1453176-200.png');
+  background-size: cover;
 }

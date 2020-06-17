@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AddPostService } from '../add-post/add-post.service';
 import { PostPayload } from '../add-post/post-payload';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-post',
@@ -9,23 +10,11 @@ import { PostPayload } from '../add-post/post-payload';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  post: PostPayload;
-  permaLink: Number;
+  
+  posts : Observable<Array<PostPayload>>
+  constructor(private postService:AddPostService) {}
 
-  constructor(private router: ActivatedRoute, private postService: AddPostService) {
+  ngOnInit(): void {
+    this.posts= this.postService.getAllPost();
   }
-
-  ngOnInit() { 
-    this.router.params.subscribe(params => {
-      this.permaLink = params['id'];
-    });
-
-    this.postService.getPost(this.permaLink).subscribe((data:PostPayload) => {
-      this.post = data;
-      console.log("data rendered");
-    },(err: any) => {
-      console.log('Failure Response');
-    })
-  }
-
 }

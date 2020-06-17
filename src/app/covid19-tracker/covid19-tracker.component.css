@@ -1,0 +1,26 @@
+:host {
+    display : block;
+    margin-top: 3rem;
+}
+
+.weatherclass {
+    margin-left: 100px;
+    margin-right: 500px;
+}
+
+.mat-card {
+    max-width: 350px;
+    margin-left: 50px;
+    float: left;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    
+}
+
+.title {
+    margin-right: auto;
+    font-weight: 400;
+}
