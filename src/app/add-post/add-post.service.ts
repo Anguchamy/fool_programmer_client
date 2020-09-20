@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AddPostService {
 
-  private url = '/api/posts'
+  private url = 'https://foolprogrammerserver.herokuapp.com/api/posts'
   constructor(private httpClient: HttpClient) { }
 
   addPost(postPayload: PostPayload){

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherService {
-  private url = '/api/weather';
+  private url = 'https://foolprogrammerserver.herokuapp.com/api/weather';
   constructor(private httpClient: HttpClient) { }
 
   getWeather(cityName: String): Observable<String> {

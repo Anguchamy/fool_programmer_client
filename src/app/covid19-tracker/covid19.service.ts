@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class Covid19service {
 
-  private url = "/api/"
+  private url = "https://foolprogrammerserver.herokuapp.com/api/"
   constructor(private httpClient: HttpClient) { }
 
   getCovidDetail(country: String) :Observable<String> {
