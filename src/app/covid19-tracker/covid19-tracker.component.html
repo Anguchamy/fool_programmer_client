@@ -5,14 +5,14 @@
           <mat-card-title>Covid 19</mat-card-title>
           <mat-card-subtitle>get details by country..</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/COVID-19_Outbreak_World_Map_per_Capita.svg/1200px-COVID-19_Outbreak_World_Map_per_Capita.svg.png" width="500" height="200"/>
+        <img mat-card-image src="/assets/svg/covid19.svg" width="500" height="200"/>
         <mat-card-content>
           <p>
             you can get the covid 19 affected count and the death count by countries.!!
           </p>
         </mat-card-content>
         <form class="form" [formGroup]="covidform" (ngSubmit)="onSubmit()" novalidate>
-            <h1 class="h3 mb-3 font-weight-normal">Enter City name</h1>
+            <h1 class="h3 mb-3 font-weight-normal">Enter country name</h1>
             <div class="form-group">
               <label for="inputCIty" class="sr-only">Cityname</label>
               <input type="text" id="inputCIty" [formControlName]="'countryName'" class="form-control" placeholder="country Name" required="" autofocus="">

@@ -8,10 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class AddPostService {
 
-  private url = 'http://localhost:8080/api/posts'
+  private url = '/api/posts'
   constructor(private httpClient: HttpClient) { }
 
   addPost(postPayload: PostPayload){
+    console.log(postPayload);
     return this.httpClient.post(this.url+ '/addpost', postPayload);
   }
 

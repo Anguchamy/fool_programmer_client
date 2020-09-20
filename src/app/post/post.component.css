@@ -9,5 +9,14 @@
 
 .postclass{
   margin-left: 100px;
-  margin-right: 100px;
+  margin-right: 600px;
+  display: inline-block;
+  white-space: nowrap;
 }
+
+
+mat-card {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+

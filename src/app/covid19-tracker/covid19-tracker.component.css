@@ -17,10 +17,13 @@
 .header {
     display: flex;
     align-items: center;
-    
 }
 
 .title {
     margin-right: auto;
     font-weight: 400;
+}
+
+.btn-primary {
+  background-color: black;
 }

@@ -16,15 +16,16 @@ export class AddPostComponent implements OnInit {
 
   title = new FormControl('');
   body = new FormControl('');
+  username = new FormControl('');
 
-  constructor(private addPostService: AddPostService, private router: Router) { 
+  constructor(private addPostService: AddPostService, private router: Router) {
     this.addPostForm = new FormGroup({
       title: this.title,
-      body: this.body
+      body: this.body,
+      username: this.username
     });
 
     this.postPayload = {
-      id: '',
       content:'',
       title: '',
       username: ''
@@ -37,9 +38,11 @@ export class AddPostComponent implements OnInit {
   addPost(){
     this.postPayload.content = this.addPostForm.get('body').value;
     this.postPayload.title = this.addPostForm.get('title').value;
+    this.postPayload.username = this.addPostForm.get('username').value;
 
     this.addPostService.addPost(this.postPayload).subscribe(data =>{
       console.log("post added successfully!!!");
+      console.log(this.postPayload);
       this.router.navigateByUrl('/posts');
     }, error =>{
       console.log("Failed to add post");

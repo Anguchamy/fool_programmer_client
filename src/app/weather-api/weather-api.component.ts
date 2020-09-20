@@ -23,7 +23,7 @@ export class WeatherApiComponent implements OnInit {
   displayedColumns: String[] = ['name','value'];
   weatherArray: weatherpayload[] = [];
 
-  
+
   constructor(private weatherserice: WeatherService, private router: Router) {
     this.weatherForm = new FormGroup({
       cityName: new FormControl()

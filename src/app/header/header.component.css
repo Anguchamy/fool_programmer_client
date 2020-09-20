@@ -1,23 +1,23 @@
 .header{
   padding: 5px 20px;
-  background: black;
+  background: #63FF86;
 }
 
 .title{
-  color: aliceblue;
+  color: black;
   text-decoration: none;
 }
 
 .login,.register{
   float: right;
   text-decoration: none;
-  color: aliceblue;
+  color: black;
   padding-top: 10px;
 }
 
 .user-name,.logout, .new-post{
   float: right;
-  color: aliceblue;
+  color: black;
   padding-top: 10px;
 }
 

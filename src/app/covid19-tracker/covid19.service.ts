@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class Covid19service {
 
-  private url = "http://localhost:8080/api/covid19"
+  private url = "/api/"
   constructor(private httpClient: HttpClient) { }
 
   getCovidDetail(country: String) :Observable<String> {
-    return this.httpClient.get<String>(this.url+"/getDetails?country="+country);
+    return this.httpClient.get<String>(this.url+"covid19/getDetail?country="+country);
   }
 }
