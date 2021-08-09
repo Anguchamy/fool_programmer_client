@@ -24,7 +24,7 @@ import { MatCardModule } from '@angular/material/card';
 import { WeatherApiComponent } from './weather-api/weather-api.component';
 import { Covid19TrackerComponent } from './covid19-tracker/covid19-tracker.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import {PostTagsComponent} from './posttags/posttags.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     AddPostComponent,
     PostComponent,
+    PostTagsComponent,
     WeatherApiComponent,
     Covid19TrackerComponent,
     NotFoundComponent
@@ -49,6 +50,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
       {path:'', component: HomeComponent},
       {path:'home', component: HomeComponent},
       {path:'posts', component: PostComponent},
+      {path:'posttags',component:PostTagsComponent},
       {path:'add-post', component: AddPostComponent},
       {path:'weather-api', component: WeatherApiComponent},
       {path:'covid19',component: Covid19TrackerComponent},

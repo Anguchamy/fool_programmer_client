@@ -14,6 +14,15 @@
     float: left;
 }
 
+.mat-result-card {
+  width: 580px;
+  height: 540px;
+}
+
+table {
+  width: 100%;
+}
+
 .header {
     display: flex;
     align-items: center;

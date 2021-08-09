@@ -1,0 +1,42 @@
+:host{
+  display : block;
+}
+
+.postclass{
+margin-left: 100px;
+margin-right: 100px;
+align-content: center;
+}
+
+.mat-card {
+margin-top: 5rem;
+max-width: 300px;
+height: 380px;
+margin-left: 100px;
+float: left;
+}
+
+.mat-header-image-programming {
+background-image: url('https://image.flaticon.com/icons/png/512/69/69045.png');
+background-size: cover;
+}
+
+.mat-header-image-pets {
+background-image: url('https://png.pngtree.com/element_our/png_detail/20180926/pets-vector-logo-template-this-cat-and-dog-logo-could-be-png_113815.jpg');
+background-size: cover;
+}
+
+.mat-header-image-accessories {
+background-image: url('https://png.pngtree.com/png-vector/20190120/ourlarge/pngtree-keyboard-computer-keyboard-computer-accessories-png-image_484653.jpg');
+background-size: cover;
+}
+
+.open {
+display: flex;
+justify-content: center;
+}
+
+.mat-button {
+color: aliceblue;
+background-color: black;
+}

@@ -21,7 +21,7 @@
         </form>
     </mat-card>
 
-    <mat-card *ngIf = isValid()>
+    <mat-card *ngIf = isValid() class="mat-result-card">
         <table mat-table [dataSource]="covidArray">
             <ng-container matColumnDef="name">
               <th mat-header-cell *matHeaderCellDef>Name</th>

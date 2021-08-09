@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AddPostService {
 
-  private url = 'https://foolprogrammerserver.herokuapp.com/api/posts'
+  private url = 'http://localhost:3000/api/posts'
   constructor(private httpClient: HttpClient) { }
 
   addPost(postPayload: PostPayload){
@@ -22,5 +22,10 @@ export class AddPostService {
 
   getPost(permalink: Number): Observable<PostPayload>{
     return this.httpClient.get<PostPayload>(this.url+"/post/"+permalink);
+  }
+
+  getPostByTag(permalink: String) {
+    console.log(permalink);
+    return this.httpClient.get<Array<PostPayload>>(this.url+"/getpostbytag?tags="+permalink);
   }
 }

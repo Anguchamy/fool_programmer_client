@@ -9,14 +9,30 @@
 
 .postclass{
   margin-left: 100px;
-  margin-right: 600px;
-  display: inline-block;
+  margin-right: 400px;
+  width: auto;
   white-space: nowrap;
 }
-
 
 mat-card {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
+.header {
+  white-space: nowrap;
+}
+
+.mat-button {
+  height:33px !important;
+  float:right;
+  color: aliceblue;
+  background-color: black;
+}
+
+mat-card-content {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

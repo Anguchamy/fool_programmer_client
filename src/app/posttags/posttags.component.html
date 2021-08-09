@@ -1,0 +1,49 @@
+<div class="postclass">
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <div mat-card-avatar class="mat-header-image-programming"></div>
+      <mat-card-title>Programming Blogs</mat-card-title>
+      <mat-card-subtitle>check out some code blog</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/svg/Programming.svg" width="300" height="200"/>
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-actions class="open">
+      <button mat-button [routerLink]="['/posts']" [queryParams]="{'tags': 'Programming'}">Open</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <div mat-card-avatar class="mat-header-image-pets"></div>
+      <mat-card-title>Pets</mat-card-title>
+      <mat-card-subtitle>Some blogs from pet trainers</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/svg/pets.svg" width="500" height="200"/>
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-actions class="open">
+      <button mat-button [routerLink]="['/posts']" [queryParams]="{'tags': 'Pets'}">Open</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <div mat-card-avatar class="mat-header-image-accessories"></div>
+      <mat-card-title>Digital Accessories</mat-card-title>
+      <mat-card-subtitle>About Latest accessories</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/svg/accessories.svg" width="500" height="200"/>
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-actions class="open">
+      <button mat-button [routerLink]="['/posts']" [queryParams]="{'tags': 'Accessories'}">Open</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
